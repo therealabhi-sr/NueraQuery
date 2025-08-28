@@ -65,13 +65,13 @@ User <--> Streamlit UI <--> QA Chain <--> Vector Store (ChromaDB) <--> Document 
 > 📌 Replace these placeholders with your actual app screenshots.  
 
 1. **Landing Page – File Upload Interface**  
-   ![Upload Screen](screenshots/upload.png)  
+   ![Upload Screen](Screenshot (161).png)  
 
 2. **Chat Interface – Q&A Flow**  
-   ![Chat Demo](screenshots/chat.png)  
+   ![Chat Demo](Screenshot (162).png)  
 
 3. **Example Query – Summarization**  
-   ![Summary Example](screenshots/summary.png)  
+   ![Summary Example](Screenshot (163).png)  
 
 ---
 
