@@ -1,144 +1,98 @@
-NueraQuery 🤖
+# 🤖 NueraQuery  
 
-NueraQuery is an AI-powered document question-answering system that allows users to interact with uploaded documents (PDFs, Word, text, etc.) and get intelligent answers in natural language. It combines state-of-the-art NLP techniques, vector embeddings, and retrieval-based AI to provide fast, accurate, and context-aware responses.
+NueraQuery is an **AI-powered Document Question-Answering System** that transforms static files (PDF, DOCX, TXT, etc.) into an **interactive knowledge base**.  
+Users can upload documents, ask natural language questions, and instantly get context-aware answers.  
 
-🌟 Features
+---
 
-Upload and analyze multiple types of documents (PDF, DOCX, TXT).
+## 🔴 Problem  
 
-Convert documents into vector embeddings for semantic search.
+Professionals, researchers, and students often deal with **long and complex documents** such as reports, legal files, and academic papers.  
 
-Ask natural language questions and get instant answers.
+- Reading hundreds of pages just to extract a few details is **time-consuming and inefficient**.  
+- Manual keyword search often **misses context and semantic meaning**.  
+- Information retrieval from unstructured documents becomes a **major bottleneck**.  
 
-Chat-style interface with distinct user and bot message styling.
+---
 
-Built using Python, Streamlit, LangChain, and ChromaDB.
+## 🟢 Solution  
 
-Optimized for resume-worthy portfolio projects.
+**NueraQuery** solves this by combining **LLMs + Vector Search** to provide **fast, accurate, and semantic answers** directly from uploaded documents.  
 
-🏗 Architecture Overview
+✨ Core Features:  
+- Upload and analyze multiple file types (PDF, DOCX, TXT).  
+- Convert documents into **vector embeddings** for semantic search.  
+- Ask questions in **natural language** and get context-aware responses.  
+- **Chat-style interface** with clear distinction between user and AI messages.  
+- Built using **Python, Streamlit, LangChain, and ChromaDB**.  
+
+---
+
+## 🏗 Architecture  
+
+**Workflow Overview:**  
+
 User <--> Streamlit UI <--> QA Chain <--> Vector Store (ChromaDB) <--> Document Embeddings
 
 
-Streamlit Frontend:
-Provides a simple and interactive chat interface to upload files, ask questions, and view AI responses.
+1. **Streamlit Frontend** – Chat-based UI for file uploads and QA interaction.  
+2. **Document Loader & Splitter** – Breaks large docs into chunks for efficient embedding.  
+3. **Vector Store (ChromaDB/FAISS)** – Stores embeddings and retrieves relevant chunks.  
+4. **QA Chain (LangChain + LLM)** – Uses retrieval-augmented generation (RAG) for answers.  
+5. **Optional Local Cache** – Saves embeddings for faster re-queries.  
 
-Document Loader & Splitter:
-Breaks large documents into smaller, manageable chunks for efficient embedding.
+🛠 **Tech Stack:**  
+- **Python 3.10+**  
+- **Streamlit** – Web-based UI  
+- **LangChain** – LLM orchestration  
+- **ChromaDB** – Vector database  
+- **OpenAI GPT** – Core LLM for answers  
+- **PyPDF2 / python-docx / textract** – Document parsing  
 
-Vector Store (ChromaDB):
-Stores embeddings and allows semantic retrieval of relevant document sections.
+---
 
-QA Chain (LangChain + LLM):
-Uses retrieval-augmented generation to provide accurate answers based on the document context.
+## 📊 Results  
 
-Optional Local Storage:
-Caches embeddings and processed data for faster subsequent queries.
+- ⚡ Queries across **multi-page PDFs answered within seconds**.  
+- 🎯 **High accuracy** on semantic queries (context-aware, not just keywords).  
+- 📚 Handles **reports, research papers, and company profiles** seamlessly.  
+- 🚀 Portfolio-ready project that demonstrates **real-world NLP application**.  
 
-🛠 Tech Stack
+---
 
-Python 3.10+
+## 🎥 Demo Screenshots  
 
-Streamlit – Web-based UI
+> 📌 Replace these placeholders with your actual app screenshots.  
 
-LangChain – Orchestrating LLM pipelines
+1. **Landing Page – File Upload Interface**  
+   ![Upload Screen](screenshots/upload.png)  
 
-ChromaDB – Vector database for embeddings
+2. **Chat Interface – Q&A Flow**  
+   ![Chat Demo](screenshots/chat.png)  
 
-OpenAI GPT (or similar LLM) – Core language model for answering queries
+3. **Example Query – Summarization**  
+   ![Summary Example](screenshots/summary.png)  
 
-PyPDF2 / python-docx / textract – Document parsing
+---
 
-FAISS (optional) – Alternative vector store for local search
+## ⚡ Setup & Installation  
 
-⚡ Setup & Installation
-
-Clone the repository
-
+```bash
+# Clone the repository
 git clone https://github.com/therealabhi-sr/NueraQuery.git
 cd NueraQuery
 
-
-Create a virtual environment
-
+# Create virtual environment
 python -m venv .venv
+source .venv/bin/activate   # Mac/Linux
+.venv\Scripts\activate      # Windows
 
-
-Activate the virtual environment
-
-Windows:
-
-.venv\Scripts\activate
-
-
-Mac/Linux:
-
-source .venv/bin/activate
-
-
-Install dependencies
-
+# Install dependencies
 pip install -r requirements.txt
 
-
-Set OpenAI API Key (or your preferred LLM API)
-
-export OPENAI_API_KEY="your_api_key_here"  # Mac/Linux
+# Set API Key
+export OPENAI_API_KEY="your_api_key_here"   # Mac/Linux
 setx OPENAI_API_KEY "your_api_key_here"     # Windows
 
-
-Run the Streamlit app
-
+# Run the app
 streamlit run app.py
-
-📝 Usage
-
-Open the app in your browser (Streamlit default: http://localhost:8501).
-
-Upload your document(s).
-
-Ask questions in natural language.
-
-Receive answers extracted intelligently from your documents.
-
-Chat interface highlights user and AI responses for readability.
-
-💡 Example Questions
-
-"What is the mission of this company?"
-
-"Summarize the financial highlights of this report."
-
-"List the key team members mentioned in this PDF."
-
-"What technologies are used in this document?"
-
-📂 Folder Structure
-NueraQuery/
-├── app.py               # Streamlit app
-├── backend/
-│   ├── generator.py     # QA chain logic
-│   ├── ingestion.py     # Document loader, splitter, and vector storage
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
-
-🚀 Future Improvements
-
-Support for real-time chat with multiple document uploads.
-
-Integration with Google Drive / Dropbox for cloud document access.
-
-Advanced analytics for document insights.
-
-Custom embeddings models for domain-specific knowledge.
-
-🧑‍💻 Author
-
-Abhishek Sr
-Aspiring AI/ML Engineer | Portfolio Project: NueraQuery
-GitHub
- | LinkedIn
-
-📜 License
-
-MIT License © 2025 Abhishek Sr
