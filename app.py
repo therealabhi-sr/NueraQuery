@@ -39,7 +39,7 @@ st.markdown("""
 
 
 st.title("🤖 NueraQuery")
-st.write("Upload documents and chat with your private AI assistant 📚")
+st.write("AI-Powered Knowledge Assistant for Enterprise Data Retrieval 📚")
 
 # -------------------------------
 # SIDEBAR - FILE UPLOAD

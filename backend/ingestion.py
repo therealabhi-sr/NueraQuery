@@ -4,8 +4,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 
-def document_load(file_path:str):
-    loader = PyPDFLoader(file_path)
+def document_load(file_dir:str):
+    loader = PyPDFLoader(file_dir)
     documents = loader.load()
     return documents
 
